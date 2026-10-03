@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0B1B2D"/>
+  <!-- Crane forming the vertical house stroke -->
+  <path d="M22 14V50M22 18H44M44 18L32 28M22 28H32" stroke="#D8A24A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Roof contour -->
+  <path d="M14 36L32 20L50 36" stroke="#C1662F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- House base -->
+  <path d="M18 35V48H46V35" stroke="#F5EFEB" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="32" cy="40" r="3" fill="#D8A24A"/>
+</svg>
