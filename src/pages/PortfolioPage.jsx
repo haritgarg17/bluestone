@@ -204,7 +204,7 @@ export default function PortfolioPage() {
                     </button>
 
                     <button
-                      onClick={() => navigateTo('register')}
+                      onClick={() => navigateTo('contact')}
                       style={{
                         background: 'none',
                         border: 'none',
@@ -294,12 +294,12 @@ export default function PortfolioPage() {
               <button
                 onClick={() => {
                   setActiveModalItem(null);
-                  navigateTo('register');
+                  navigateTo('contact');
                 }}
                 className="btn-primary"
                 style={{ width: '100%', padding: '14px' }}
               >
-                Start Registration For a Residence Like This <ArrowRight size={16} />
+                Inquire About a Design Like This <ArrowRight size={16} />
               </button>
             </div>
           </div>

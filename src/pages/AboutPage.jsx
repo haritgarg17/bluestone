@@ -269,11 +269,11 @@ export default function AboutPage() {
                 Whether you possess an ancestral plot in Jaipur, an urban parcel in Bengaluru, or an estate in Lucknow, our regional studio models and centralized construction procurement team mobilize with unmatched speed.
               </p>
               <button
-                onClick={() => navigateTo('register')}
+                onClick={() => navigateTo('contact')}
                 className="btn-primary"
                 style={{ padding: '12px 28px', fontSize: '14px' }}
               >
-                Register Your Land Plot <ArrowRight size={14} />
+                Consult Our Engineering Team <ArrowRight size={14} />
               </button>
             </div>
 

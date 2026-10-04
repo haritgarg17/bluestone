@@ -122,11 +122,11 @@ export default function HomePage() {
               {/* Action Triggers */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '44px' }}>
                 <button
-                  onClick={() => navigateTo('register')}
+                  onClick={() => navigateTo('contact')}
                   className="btn-primary"
                   style={{ padding: '16px 36px', fontSize: '15.5px' }}
                 >
-                  <span>Register Your Project</span>
+                  <span>Start Your Project Consultation</span>
                   <ArrowRight size={16} />
                 </button>
 
@@ -613,11 +613,11 @@ export default function HomePage() {
 
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
             <button
-              onClick={() => navigateTo('register')}
+              onClick={() => navigateTo('contact')}
               className="btn-primary"
               style={{ padding: '15px 36px' }}
             >
-              Start Step 1: Register Your Project Now
+              Consult Our Architectural & Civil Team
             </button>
           </div>
         </div>
@@ -875,11 +875,11 @@ export default function HomePage() {
 
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px' }}>
             <button
-              onClick={() => navigateTo('register')}
+              onClick={() => navigateTo('contact')}
               className="btn-primary"
               style={{ padding: '16px 38px', fontSize: '15.5px', fontWeight: 700 }}
             >
-              <span>Register Your Project</span>
+              <span>Schedule Consultation</span>
               <ArrowRight size={16} />
             </button>
 

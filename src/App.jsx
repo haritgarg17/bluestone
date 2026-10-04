@@ -10,7 +10,6 @@ import Toast from './components/Toast';
 // Pages
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import RegistrationPage from './pages/RegistrationPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ReviewsPage from './pages/ReviewsPage';
@@ -25,8 +24,6 @@ function MainContent() {
         return <HomePage />;
       case 'about':
         return <AboutPage />;
-      case 'register':
-        return <RegistrationPage />;
       case 'portfolio':
         return <PortfolioPage />;
       case 'projects':

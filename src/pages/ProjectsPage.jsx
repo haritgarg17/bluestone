@@ -136,11 +136,11 @@ export default function ProjectsPage() {
                   </ul>
 
                   <button
-                    onClick={() => navigateTo('register')}
+                    onClick={() => navigateTo('contact')}
                     className="btn-primary"
                     style={{ padding: '12px 24px', fontSize: '13.5px' }}
                   >
-                    Register Your Site for Turnkey Construction <ArrowRight size={14} />
+                    Consult On Your Construction Project <ArrowRight size={14} />
                   </button>
                 </div>
               </div>

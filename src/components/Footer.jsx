@@ -115,7 +115,6 @@ export default function Footer() {
               {[
                 { id: 'home', label: 'Home Page' },
                 { id: 'about', label: 'Company Profile & Group' },
-                { id: 'register', label: 'Client Project Registration' },
                 { id: 'portfolio', label: 'Design Concepts Portfolio' },
                 { id: 'projects', label: 'Construction Case Studies' },
                 { id: 'reviews', label: 'Client Reviews & Ratings' },
@@ -198,16 +197,9 @@ export default function Footer() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <button
-                onClick={() => navigateTo('register')}
-                className="btn-primary"
-                style={{ padding: '9px 14px', fontSize: '12.5px', justifyContent: 'center' }}
-              >
-                Register Your Project Online
-              </button>
-              <button
                 onClick={() => navigateTo('contact')}
-                className="btn-secondary"
-                style={{ color: '#FAF6F0', borderColor: 'rgba(216,162,74,0.4)', padding: '9px 14px', fontSize: '12.5px', justifyContent: 'center' }}
+                className="btn-primary"
+                style={{ padding: '11px 16px', fontSize: '13px', justifyContent: 'center' }}
               >
                 Schedule Engineering Consultation
               </button>
