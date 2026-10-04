@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, Compass, Building2, ShieldCheck, MapPin, Award, Layers, Sparkles, FileText, Download, ChevronRight, HelpCircle, Check, ChevronDown } from 'lucide-react';
 import { useApp } from '../context/AppContext';
-import { BRAND_INFO, PORTFOLIO_ITEMS, TESTIMONIALS, SERVICE_PACKAGES } from '../data/initialData';
+import { BRAND_INFO, PORTFOLIO_ITEMS, TESTIMONIALS } from '../data/initialData';
 
 export default function HomePage() {
   const { navigateTo } = useApp();

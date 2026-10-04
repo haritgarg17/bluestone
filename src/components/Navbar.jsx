@@ -23,7 +23,6 @@ export default function Navbar() {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'Company Profile' },
-    { id: 'services', label: 'Services & Packages' },
     { id: 'register', label: 'Client Registration' },
     { id: 'portfolio', label: 'Portfolio' },
     { id: 'projects', label: 'Projects' },

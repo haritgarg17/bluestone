@@ -115,7 +115,6 @@ export default function Footer() {
               {[
                 { id: 'home', label: 'Home Page' },
                 { id: 'about', label: 'Company Profile & Group' },
-                { id: 'services', label: 'Design & Construction Services' },
                 { id: 'register', label: 'Client Project Registration' },
                 { id: 'portfolio', label: 'Design Concepts Portfolio' },
                 { id: 'projects', label: 'Construction Case Studies' },
