@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function BackgroundWatermark() {
-  const contactText = "BLUESTONE BUILDCON • +91 8004300830 • +91 95699 56067 • bluestone.bildcon@gmail.com • @bluestone.buildcon • PAN-INDIA";
+  const contactText = "BLUESTONE BUILDCON • +91 8004300830 • +91 95699 56067 • bluestone.bildcon@gmail.com • @bluestone.buildcon";
   const rows = Array.from({ length: 18 });
 
   return (

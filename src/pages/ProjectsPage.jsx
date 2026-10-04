@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, MapPin, Calendar, CheckCircle2, Ruler, HardHat, ArrowRight } from 'lucide-react';
+import { Building2, Calendar, CheckCircle2, Ruler, HardHat, ArrowRight } from 'lucide-react';
 import { CONSTRUCTION_PROJECTS } from '../data/initialData';
 import { useApp } from '../context/AppContext';
 
@@ -102,8 +102,8 @@ export default function ProjectsPage() {
                     }}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px' }}>
-                      <MapPin size={16} color="#C1662F" />
-                      <span>{proj.location}</span>
+                      <Building2 size={16} color="#C1662F" />
+                      <span>Built-up: {proj.builtArea}</span>
                     </div>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px' }}>

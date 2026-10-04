@@ -47,7 +47,7 @@ export default function ContactPage() {
         <div className="container">
           <div style={{ maxWidth: '800px' }}>
             <div className="eyebrow-badge" style={{ marginBottom: '14px' }}>
-              PAN-India Client Coordination
+              Nationwide Client Coordination
             </div>
             <h1 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', color: '#0B1B2D', lineHeight: 1.15, marginBottom: '16px' }}>
               Connect with Bluestone Buildcon
@@ -70,7 +70,7 @@ export default function ContactPage() {
               alignItems: 'start'
             }}
           >
-            {/* Left: Contact Channels & PAN-India Footprint */}
+            {/* Left: Contact Channels & Operating Footprint */}
             <div>
               <h2 style={{ fontSize: '24px', color: '#0B1B2D', marginBottom: '20px', fontWeight: 700 }}>
                 Corporate Contact Channels
@@ -169,7 +169,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* PAN-India Service Map Card */}
+              {/* Service Map Card */}
               <div
                 className="luxury-card"
                 style={{
@@ -183,7 +183,7 @@ export default function ContactPage() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
                   <MapPin size={20} color="#D8A24A" />
                   <h3 style={{ fontSize: '18px', color: '#FFFFFF', margin: 0 }}>
-                    PAN-India Footprint & Operating Hubs
+                    Operating Footprint & Regional Hubs
                   </h3>
                 </div>
                 <p style={{ fontSize: '13px', color: '#D5C2AD', lineHeight: 1.5, marginBottom: '16px' }}>

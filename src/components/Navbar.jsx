@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, ArrowRight, Menu, X, Sparkles, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import BrandLogo from './BrandLogo';
 
@@ -46,91 +46,6 @@ export default function Navbar() {
         transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
       }}
     >
-      {/* Top micro-announcement bar with live pulse */}
-      <div
-        style={{
-          backgroundColor: '#0B1B2D',
-          color: '#FAF6F0',
-          fontSize: '11px',
-          padding: isScrolled ? '4px 0' : '7px 0',
-          borderBottom: '1px solid rgba(216, 162, 74, 0.25)',
-          transition: 'all 0.25s ease'
-        }}
-      >
-        <div
-          className="container"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            gap: '8px'
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '9px' }}>
-            <span className="pulse-indicator" />
-            <span
-              style={{
-                backgroundColor: '#C1662F',
-                color: '#FFFFFF',
-                fontSize: '8.5px',
-                fontWeight: 800,
-                padding: '1.5px 7px',
-                borderRadius: '3px',
-                letterSpacing: '0.09em',
-                textTransform: 'uppercase'
-              }}
-            >
-              PAN-INDIA NETWORK
-            </span>
-            <span style={{ color: '#D5C2AD', fontSize: '11px', letterSpacing: '0.02em' }}>
-              Bluestone Buildcon &bull; R S Design Studio &bull; A S Home Planner
-            </span>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
-            <a
-              href="tel:+918004300830"
-              style={{
-                color: '#D8A24A',
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '5px',
-                fontWeight: 700,
-                letterSpacing: '0.02em',
-                fontSize: '11.5px',
-                transition: 'color 0.2s ease'
-              }}
-              onMouseEnter={(e) => (e.target.style.color = '#FFFFFF')}
-              onMouseLeave={(e) => (e.target.style.color = '#D8A24A')}
-            >
-              <Phone size={12} /> +91 8004300830
-            </a>
-
-            <span style={{ color: 'rgba(216, 162, 74, 0.4)', fontSize: '10px' }}>|</span>
-
-            <a
-              href="mailto:bluestone.bildcon@gmail.com"
-              style={{
-                color: '#FAF6F0',
-                textDecoration: 'none',
-                fontSize: '11px',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '5px',
-                opacity: 0.9,
-                transition: 'opacity 0.2s ease'
-              }}
-              onMouseEnter={(e) => (e.target.style.opacity = '1')}
-              onMouseLeave={(e) => (e.target.style.opacity = '0.9')}
-            >
-              <Mail size={11} color="#D8A24A" /> bluestone.bildcon@gmail.com
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation Bar */}
       <div
         className="container"
@@ -205,39 +120,21 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Action CTA */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <button
-              onClick={() => handleNavClick('register')}
-              className="btn-primary"
-              style={{
-                padding: isScrolled ? '10px 22px' : '12px 26px',
-                fontSize: '13.5px',
-                fontWeight: 700,
-                borderRadius: '10px'
-              }}
-            >
-              <Sparkles size={14} color="#FBF0D9" />
-              <span>Register Your Project</span>
-              <ArrowRight size={14} />
-            </button>
-
-            {/* Mobile Hamburger Toggle */}
-            <button
-              onClick={() => setMobileMenuOpen(prev => !prev)}
-              style={{
-                background: 'transparent',
-                border: '1px solid var(--border-strong)',
-                borderRadius: '8px',
-                padding: '8px',
-                cursor: 'pointer',
-                display: 'none'
-              }}
-              className="mobile-toggle-btn"
-            >
-              {mobileMenuOpen ? <X size={22} color="#0B1B2D" /> : <Menu size={22} color="#0B1B2D" />}
-            </button>
-          </div>
+          {/* Mobile Hamburger Toggle */}
+          <button
+            onClick={() => setMobileMenuOpen(prev => !prev)}
+            style={{
+              background: 'transparent',
+              border: '1px solid var(--border-strong)',
+              borderRadius: '8px',
+              padding: '8px',
+              cursor: 'pointer',
+              display: 'none'
+            }}
+            className="mobile-toggle-btn"
+          >
+            {mobileMenuOpen ? <X size={22} color="#0B1B2D" /> : <Menu size={22} color="#0B1B2D" />}
+          </button>
         </div>
 
         {/* Mobile Dropdown Menu */}
@@ -274,15 +171,7 @@ export default function Navbar() {
               </button>
             ))}
 
-            <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px dashed #D5C2AD' }}>
-              <button
-                onClick={() => handleNavClick('register')}
-                className="btn-primary"
-                style={{ width: '100%', padding: '13px', fontSize: '14.5px', justifyContent: 'center' }}
-              >
-                Register Your Project
-              </button>
-            </div>
+
           </div>
         )}
       </div>

@@ -135,7 +135,7 @@ export default function AboutPage() {
                   Bluestone Buildcon
                 </h3>
                 <p style={{ fontSize: '13px', color: '#D5C2AD', margin: 0 }}>
-                  Turnkey Civil Engineering, Structural Procurement & On-Site Construction (PAN India)
+                  Turnkey Civil Engineering, Structural Procurement & On-Site Construction
                 </p>
               </div>
 
@@ -245,7 +245,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* PAN-India Service Footprint Banner */}
+          {/* Service Footprint Banner */}
           <div
             style={{
               backgroundColor: '#0B1B2D',
@@ -260,7 +260,7 @@ export default function AboutPage() {
           >
             <div>
               <span style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.16em', color: '#D8A24A', fontWeight: 800 }}>
-                PAN-India Service Guarantee
+                Comprehensive Service Guarantee
               </span>
               <h2 style={{ fontSize: '28px', color: '#FFFFFF', margin: '8px 0 14px' }}>
                 Engineering Capacity in Every Corner of India

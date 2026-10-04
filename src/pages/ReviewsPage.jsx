@@ -103,7 +103,7 @@ export default function ReviewsPage() {
                   ))}
                 </div>
                 <div style={{ fontSize: '12px', color: '#D5C2AD' }}>
-                  Based on 340+ Verified Pan-India Civil & Architectural Audits
+                  Based on 340+ Verified Civil & Architectural Audits
                 </div>
               </div>
             </div>

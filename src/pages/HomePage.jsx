@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, Compass, Building2, ShieldCheck, MapPin, Award, Layers, Sparkles, FileText, Download, Calculator, ChevronRight, HelpCircle, Check, ChevronDown } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Compass, Building2, ShieldCheck, MapPin, Award, Layers, Sparkles, FileText, Download, ChevronRight, HelpCircle, Check, ChevronDown } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { BRAND_INFO, PORTFOLIO_ITEMS, TESTIMONIALS, SERVICE_PACKAGES } from '../data/initialData';
 
@@ -9,10 +9,6 @@ export default function HomePage() {
   // Hero Interactive Slider State
   const [heroSlide, setHeroSlide] = useState(0);
 
-  // Interactive Quick Project Estimator State
-  const [plotArea, setPlotArea] = useState(2400);
-  const [houseType, setHouseType] = useState('villa');
-  const [zoneRegion, setZoneRegion] = useState('north-west');
 
   // FAQ Accordion State
   const [activeFaq, setActiveFaq] = useState(null);
@@ -23,7 +19,6 @@ export default function HomePage() {
       unit: "R S Design Studio",
       execution: "Bluestone Buildcon Civil Directorate",
       image: "/hero_villa.jpg",
-      location: "Jaipur, Rajasthan",
       tag: "North & West Zone Lead"
     },
     {
@@ -31,7 +26,6 @@ export default function HomePage() {
       unit: "A S Home Planner",
       execution: "Bluestone Buildcon Coastal Division",
       image: "/as_bungalow.jpg",
-      location: "Bengaluru, Karnataka",
       tag: "South & East Zone Lead"
     },
     {
@@ -39,7 +33,6 @@ export default function HomePage() {
       unit: "R S Design Studio",
       execution: "Bluestone Buildcon Turnkey Division",
       image: "/rs_villa.jpg",
-      location: "Pune, Maharashtra",
       tag: "Western Territory Benchmark"
     },
     {
@@ -47,14 +40,10 @@ export default function HomePage() {
       unit: "Bluestone Buildcon",
       execution: "Turnkey Heavy Civil Works",
       image: "/bluestone_construction.jpg",
-      location: "Gurugram, NCR",
-      tag: "PAN-India Civil Mastery"
+      tag: "Civil Construction Mastery"
     }
   ];
 
-  // Estimation Calculation
-  const estimatedDesignCost = Math.round(plotArea * (houseType === 'royal' ? 28 : houseType === 'villa' ? 18 : 12));
-  const estimatedTimeline = plotArea > 3500 ? "12 - 14 Months" : plotArea > 2000 ? "9 - 11 Months" : "7 - 9 Months";
 
   const faqs = [
     {
@@ -102,7 +91,7 @@ export default function HomePage() {
             {/* Left Column: Editorial Typography & Actions */}
             <div style={{ maxWidth: '640px' }}>
               <div className="eyebrow-badge" style={{ marginBottom: '20px' }}>
-                <Sparkles size={13} /> PAN-India Architectural & Construction Excellence
+                <Sparkles size={13} /> Architectural & Construction Excellence
               </div>
 
               <h1
@@ -180,7 +169,7 @@ export default function HomePage() {
 
                 <div>
                   <div style={{ fontSize: '26px', fontWeight: 800, color: '#D8A24A', fontFamily: 'var(--font-sans)', lineHeight: 1 }}>
-                    PAN-India
+                    Nationwide
                   </div>
                   <div style={{ fontSize: '11.5px', color: '#7D7065', textTransform: 'uppercase', letterSpacing: '0.04em', marginTop: '6px', fontWeight: 600 }}>
                     All 28 States Covered
@@ -305,7 +294,7 @@ export default function HomePage() {
                     </h3>
 
                     <div style={{ fontSize: '12.5px', color: '#D5C2AD' }}>
-                      {heroSlides[heroSlide].unit} &bull; {heroSlides[heroSlide].location}
+                      {heroSlides[heroSlide].unit} &bull; {heroSlides[heroSlide].execution}
                     </div>
                   </div>
                 </div>
@@ -425,7 +414,7 @@ export default function HomePage() {
             >
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-                  <span className="navy-badge">Parent Brand &bull; PAN-India</span>
+                  <span className="navy-badge">Parent Brand &bull; Turnkey EPC</span>
                   <Building2 size={26} color="#C1662F" />
                 </div>
                 <h3 style={{ fontSize: '23px', marginBottom: '8px', color: '#0B1B2D', fontWeight: 700 }}>
@@ -516,144 +505,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. INTERACTIVE PROJECT ESTIMATOR CALCULATOR WIDGET */}
-      <section style={{ padding: '80px 0', backgroundColor: '#FAF6F0' }}>
-        <div className="container">
-          <div
-            className="luxury-card"
-            style={{
-              backgroundColor: '#FFFFFF',
-              border: '1px solid #D5C2AD',
-              borderRadius: '24px',
-              padding: '44px',
-              boxShadow: '0 20px 50px rgba(11,27,45,0.08)'
-            }}
-          >
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', alignItems: 'center' }}>
-              <div>
-                <div className="eyebrow-badge" style={{ marginBottom: '12px' }}>
-                  <Calculator size={13} /> Real-Time Project Estimator
-                </div>
-                <h2 style={{ fontSize: '28px', color: '#0B1B2D', marginBottom: '10px', fontWeight: 700 }}>
-                  Calculate Your Design & Build Investment
-                </h2>
-                <p style={{ fontSize: '14.5px', color: '#584C42', lineHeight: 1.6, marginBottom: '28px' }}>
-                  Get an instant, transparent projection for architectural blueprints and estimated turnkey construction timelines tailored to your plot size.
-                </p>
-
-                {/* Plot Area Slider */}
-                <div style={{ marginBottom: '24px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <label style={{ fontSize: '13px', fontWeight: 700, color: '#0B1B2D' }}>
-                      Plot / Built-up Size (Sq. Ft.):
-                    </label>
-                    <strong style={{ fontSize: '16px', color: '#C1662F' }}>
-                      {plotArea.toLocaleString('en-IN')} Sq. Ft.
-                    </strong>
-                  </div>
-                  <input
-                    type="range"
-                    min="1000"
-                    max="8000"
-                    step="100"
-                    value={plotArea}
-                    onChange={(e) => setPlotArea(Number(e.target.value))}
-                    style={{ width: '100%', accentColor: '#C1662F', cursor: 'pointer' }}
-                  />
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#7D7065', marginTop: '4px' }}>
-                    <span>1,000 sq.ft. (Townhouse)</span>
-                    <span>3,000 sq.ft. (Duplex)</span>
-                    <span>8,000 sq.ft. (Estate)</span>
-                  </div>
-                </div>
-
-                {/* Architecture Typology */}
-                <div style={{ marginBottom: '20px' }}>
-                  <label style={{ display: 'block', fontSize: '13px', fontWeight: 700, color: '#0B1B2D', marginBottom: '8px' }}>
-                    Select Typology:
-                  </label>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
-                    {[
-                      { id: 'compact', label: 'Contemporary Home' },
-                      { id: 'villa', label: 'Luxury Villa' },
-                      { id: 'royal', label: 'Royal Estate' }
-                    ].map((t) => (
-                      <button
-                        key={t.id}
-                        type="button"
-                        onClick={() => setHouseType(t.id)}
-                        style={{
-                          padding: '10px 8px',
-                          borderRadius: '8px',
-                          border: houseType === t.id ? '2px solid #C1662F' : '1px solid #D5C2AD',
-                          backgroundColor: houseType === t.id ? '#FAF3E7' : '#FAF6F0',
-                          color: houseType === t.id ? '#C1662F' : '#584C42',
-                          fontWeight: 700,
-                          fontSize: '12px',
-                          cursor: 'pointer'
-                        }}
-                      >
-                        {t.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Real-time Calculation Result Card */}
-              <div
-                style={{
-                  backgroundColor: '#0B1B2D',
-                  color: '#FAF6F0',
-                  borderRadius: '16px',
-                  padding: '36px 30px',
-                  border: '1px solid #D8A24A',
-                  boxShadow: '0 16px 40px rgba(11,27,45,0.2)'
-                }}
-              >
-                <span style={{ fontSize: '10.5px', textTransform: 'uppercase', letterSpacing: '0.14em', color: '#D8A24A', fontWeight: 800 }}>
-                  Transparent Projected Scope
-                </span>
-
-                <div style={{ marginTop: '16px', marginBottom: '24px' }}>
-                  <div style={{ fontSize: '12px', color: '#D5C2AD' }}>Estimated Architectural Blueprint Fee</div>
-                  <div style={{ fontSize: '32px', fontWeight: 800, color: '#FAF6F0', fontFamily: 'var(--font-sans)', marginTop: '2px' }}>
-                    ₹{estimatedDesignCost.toLocaleString('en-IN')}*
-                  </div>
-                  <div style={{ fontSize: '11px', color: '#D8A24A', marginTop: '2px' }}>
-                    Payable via 2-stage escrow: Initial token now + Final balance upon proposal review
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.1)', marginBottom: '24px', fontSize: '13px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ color: '#D5C2AD' }}>Turnkey Construction Timeline:</span>
-                    <strong style={{ color: '#FAF6F0' }}>{estimatedTimeline}</strong>
-                  </div>
-
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ color: '#D5C2AD' }}>Civil Execution Directorate:</span>
-                    <strong style={{ color: '#C1662F' }}>Bluestone Buildcon</strong>
-                  </div>
-
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ color: '#D5C2AD' }}>Cost Overrun Protection:</span>
-                    <strong style={{ color: '#16A34A' }}>100% Fixed-Price Contract</strong>
-                  </div>
-                </div>
-
-                <button
-                  onClick={() => navigateTo('register')}
-                  className="btn-primary"
-                  style={{ width: '100%', padding: '14px', fontSize: '14.5px' }}
-                >
-                  Proceed with This Estimate <ArrowRight size={15} />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 5. THE 4-STEP CLIENT ROADMAP */}
       <section style={{ padding: '84px 0', backgroundColor: '#F3EBE0' }}>
@@ -836,7 +687,7 @@ export default function HomePage() {
 
                 <div style={{ padding: '24px' }}>
                   <div style={{ fontSize: '11.5px', color: '#C1662F', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '6px' }}>
-                    {item.category} &bull; {item.location}
+                    {item.category}
                   </div>
                   <h3 style={{ fontSize: '19px', color: '#0B1B2D', marginBottom: '8px', fontWeight: 700 }}>
                     {item.title}
@@ -1013,7 +864,7 @@ export default function HomePage() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '780px' }}>
           <span style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.16em', color: '#D8A24A', fontWeight: 800 }}>
-            PAN-India Design & Execution
+            Architectural Design & Execution
           </span>
           <h2 style={{ fontSize: 'clamp(2.1rem, 3.6vw, 3.1rem)', color: '#FAF6F0', margin: '14px 0 20px', fontWeight: 700 }}>
             Ready to Build Your Architectural Vision?

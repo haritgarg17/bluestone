@@ -1,6 +1,6 @@
 export const BRAND_INFO = {
   parentName: "Bluestone Buildcon",
-  parentTagline: "Premier Turnkey Construction & Civil Engineering PAN-India",
+  parentTagline: "Premier Turnkey Construction & Civil Engineering",
   units: [
     {
       id: "rs-design",
@@ -24,8 +24,8 @@ export const BRAND_INFO = {
     phoneSecondary: "+91 95699 56067",
     email: "bluestone.bildcon@gmail.com",
     instagram: "@bluestone.buildcon",
-    address: "Corporate Hub: Sector 62, Noida, NCR & Branch Operations PAN-India",
-    panIndiaCoverage: "Serving all 28 States & 8 Union Territories across India"
+    address: "Corporate Hub: Sector 62, Noida, NCR & Branch Operations",
+    nationalCoverage: "Serving all 28 States & 8 Union Territories across India"
   }
 };
 
@@ -192,7 +192,6 @@ export const PORTFOLIO_ITEMS = [
     category: "Luxury Villa",
     unit: "R S Design Studio",
     unitId: "rs-design",
-    location: "Jaipur, Rajasthan",
     area: "6,400 sq.ft.",
     image: "/rs_villa.jpg",
     description: "Cantilevered stone massing harmonized with indigenous Dholpur sandstone and motorized teak louvers for climate mitigation."
@@ -203,7 +202,6 @@ export const PORTFOLIO_ITEMS = [
     category: "Tropical Residential",
     unit: "A S Home Planner",
     unitId: "as-home",
-    location: "Kochi, Kerala",
     area: "4,800 sq.ft.",
     image: "/as_bungalow.jpg",
     description: "Deep clay-tile overhanging eaves, exposed laterite pillars, and an internal central lily pond maximizing natural cross-ventilation."
@@ -214,7 +212,6 @@ export const PORTFOLIO_ITEMS = [
     category: "Commercial",
     unit: "Bluestone Buildcon",
     unitId: "bluestone",
-    location: "Gurugram, NCR",
     area: "34,000 sq.ft.",
     image: "/bluestone_construction.jpg",
     description: "Turnkey structural execution featuring post-tensioned slabs, high-performance acoustic facade, and zero-defect civil handover."
@@ -225,7 +222,6 @@ export const PORTFOLIO_ITEMS = [
     category: "Luxury Villa",
     unit: "R S Design Studio",
     unitId: "rs-design",
-    location: "Pune, Maharashtra",
     area: "5,200 sq.ft.",
     image: "/hero_villa.jpg",
     description: "Terraced multi-level family sanctuary incorporating warm beige stone cladding, infinity reflection pool, and expansive landscape gardens."
@@ -237,7 +233,6 @@ export const CONSTRUCTION_PROJECTS = [
     id: "proj-1",
     title: "The Royal Orchard Enclave",
     client: "Shri V. Singhania",
-    location: "Lucknow, Uttar Pradesh",
     plotSize: "5,000 Sq. Ft.",
     builtArea: "7,800 Sq. Ft.",
     timeline: "14 Months (Delivered Ahead of Schedule)",
@@ -256,7 +251,6 @@ export const CONSTRUCTION_PROJECTS = [
     id: "proj-2",
     title: "Breeze Crest Lakeside Bungalow",
     client: "K. R. Venkatraman",
-    location: "Coimbatore, Tamil Nadu",
     plotSize: "4,200 Sq. Ft.",
     builtArea: "5,600 Sq. Ft.",
     timeline: "Ongoing — Month 9 of 12",
@@ -275,7 +269,6 @@ export const CONSTRUCTION_PROJECTS = [
     id: "proj-3",
     title: "Aura Horizon Commercial Plaza",
     client: "Apex Infra Consortium",
-    location: "Ahmedabad, Gujarat",
     plotSize: "18,000 Sq. Ft.",
     builtArea: "42,000 Sq. Ft.",
     timeline: "Ongoing — Month 6 of 18",
@@ -309,7 +302,7 @@ export const TESTIMONIALS = [
     project: "4BHK Contemporary Tropical Home",
     rating: 5,
     studioTagged: "A S Home Planner (Drawings) + Bluestone Buildcon (Execution)",
-    quote: "A S Home Planner understood the local climate and Vastu constraints of our plot in Hyderabad perfectly. When the drawings were completed, Bluestone's construction division took over without a single communication gap. Truly a PAN-India power team."
+    quote: "A S Home Planner understood the local climate and Vastu constraints of our plot in Hyderabad perfectly. When the drawings were completed, Bluestone's construction division took over without a single communication gap. Truly a power team."
   },
   {
     id: "test-3",

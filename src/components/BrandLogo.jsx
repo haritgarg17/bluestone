@@ -58,7 +58,7 @@ export default function BrandLogo({ variant = 'default', size = 'normal' }) {
           BLUESTONE
         </span>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginTop: '1px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', marginTop: '1px' }}>
           <span
             style={{
               fontFamily: "var(--font-sans)",
@@ -71,27 +71,6 @@ export default function BrandLogo({ variant = 'default', size = 'normal' }) {
             }}
           >
             BUILDCON
-          </span>
-          <span
-            style={{
-              width: '3px',
-              height: '3px',
-              borderRadius: '50%',
-              backgroundColor: '#C1662F',
-              display: 'inline-block'
-            }}
-          />
-          <span
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: '7.5px',
-              fontWeight: 800,
-              letterSpacing: '0.12em',
-              color: '#C1662F',
-              textTransform: 'uppercase'
-            }}
-          >
-            PAN INDIA
           </span>
         </div>
       </div>

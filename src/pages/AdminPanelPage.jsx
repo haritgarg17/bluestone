@@ -63,7 +63,7 @@ export default function AdminPanelPage() {
               Bluestone Buildcon Admin Hub
             </h1>
             <p style={{ fontSize: '13.5px', color: '#D5C2AD', margin: 0 }}>
-              Manage PAN-India client registrations, supervise drawing proposals from R S Design Studio & A S Home Planner, and control final blueprint releases.
+              Manage client registrations, supervise drawing proposals from R S Design Studio & A S Home Planner, and control final blueprint releases.
             </p>
           </div>
 

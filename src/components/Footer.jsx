@@ -50,7 +50,7 @@ export default function Footer() {
               Three Connected Brands. One Unified Quality Standard.
             </h3>
             <p style={{ fontSize: '13px', color: '#D5C2AD', margin: 0, lineHeight: 1.5 }}>
-              Architectural designs crafted by our dual regional studios; turnkey civil construction executed unconditionally under Bluestone Buildcon across PAN-India.
+              Architectural designs crafted by our dual regional studios; turnkey civil construction executed unconditionally under Bluestone Buildcon across India.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#C1662F' }} />
               <div>
                 <strong style={{ color: '#FAF6F0', fontSize: '13px' }}>Bluestone Buildcon</strong>
-                <span style={{ color: '#D5C2AD', fontSize: '11.5px', marginLeft: '6px' }}>&bull; Turnkey Civil & EPC Execution (PAN-India)</span>
+                <span style={{ color: '#D5C2AD', fontSize: '11.5px', marginLeft: '6px' }}>&bull; Turnkey Civil & EPC Execution</span>
               </div>
             </div>
 
@@ -182,7 +182,7 @@ export default function Footer() {
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginTop: '4px' }}>
                 <MapPin size={16} color="#D8A24A" style={{ marginTop: '2px', flexShrink: 0 }} />
                 <span style={{ lineHeight: 1.4 }}>
-                  NCR Corporate Office & Site Mobilization Facilities PAN-India
+                  NCR Corporate Office & Site Mobilization Facilities
                 </span>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Legal & PAN-India Tagline */}
+        {/* Bottom Legal & Tagline */}
         <div
           style={{
             borderTop: '1px solid rgba(255, 255, 255, 0.08)',
@@ -235,7 +235,7 @@ export default function Footer() {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <span>PAN-India Turnkey Delivery</span>
+            <span>Turnkey Civil Delivery</span>
             <span>•</span>
             <span>Razorpay Secured Gateway</span>
             <span>•</span>
