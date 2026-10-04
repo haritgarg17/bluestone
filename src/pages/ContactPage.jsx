@@ -21,16 +21,54 @@ export default function ContactPage() {
     serviceInterest: 'both',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formState.name || !formState.phone) {
-      alert("Please provide your name and phone number.");
+    if (!formState.name.trim() || !formState.phone.trim()) {
+      showToast("Please provide your name and phone number.", "warn");
       return;
     }
-    setSubmitted(true);
-    showToast("Enquiry transmitted to Bluestone Project Coordination desk!", "success");
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "ceeff190-af04-409b-a161-b25c3bf5f5b6",
+          subject: `New Client Consultation Request from ${formState.name}`,
+          from_name: "Bluestone Buildcon Website",
+          name: formState.name,
+          phone: formState.phone,
+          email: formState.email || "Not provided",
+          city_state: formState.cityState || "Not provided",
+          service_interest: formState.serviceInterest === 'both' 
+            ? "Both Architectural Blueprints & Turnkey Civil Construction" 
+            : formState.serviceInterest === 'architectural_only' 
+            ? "Architectural Design & 3D Elevations Only" 
+            : "Turnkey Civil Construction Only (Existing Drawing)",
+          message: formState.message || "No specific message provided"
+        })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+        showToast("Consultation request successfully submitted! Our team will contact you shortly.", "success");
+      } else {
+        showToast(result.message || "Failed to submit request. Please try again or call us.", "warn");
+      }
+    } catch (err) {
+      console.error("Web3Forms submission error:", err);
+      showToast("Unable to send request right now. Please call us directly.", "warn");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -233,7 +271,17 @@ export default function ContactPage() {
                     A senior project architect from Bluestone Buildcon will contact you shortly on <strong>{formState.phone}</strong>.
                   </p>
                   <button
-                    onClick={() => setSubmitted(false)}
+                    onClick={() => {
+                      setFormState({
+                        name: '',
+                        phone: '',
+                        email: '',
+                        cityState: '',
+                        serviceInterest: 'both',
+                        message: ''
+                      });
+                      setSubmitted(false);
+                    }}
                     className="btn-secondary"
                     style={{ padding: '10px 20px', fontSize: '13px' }}
                   >
@@ -242,6 +290,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+                  <input type="hidden" name="access_key" value="ceeff190-af04-409b-a161-b25c3bf5f5b6" />
                   <div>
                     <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#0B1B2D', marginBottom: '6px' }}>
                       Full Name *
@@ -328,10 +377,17 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     className="btn-primary"
-                    style={{ width: '100%', padding: '14px', fontSize: '15px' }}
+                    style={{
+                      width: '100%',
+                      padding: '14px',
+                      fontSize: '15px',
+                      opacity: isSubmitting ? 0.75 : 1,
+                      cursor: isSubmitting ? 'not-allowed' : 'pointer'
+                    }}
                   >
-                    <Send size={15} /> Send Consultation Request
+                    <Send size={15} /> {isSubmitting ? "Transmitting Request..." : "Send Consultation Request"}
                   </button>
                 </form>
               )}
